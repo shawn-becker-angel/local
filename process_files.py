@@ -7,4 +7,6 @@ if __name__ == "__main__":
         pass
     elif len(sys.argv) > 1:
         file_info = FileInfo(parent=None, path=sys.argv[1])
-        file_info.print()
+        total_bytes = file_info.get_bytes()
+        for child in file_info.children:
+            print(child)
